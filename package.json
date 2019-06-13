@@ -1,0 +1,28 @@
+{
+    "name": "react-sdom",
+    "version": "1.0.0",
+    "description": "Simplify the task of manipulating the DOM of the react components and use animations (like jQuery)",
+    "main": "sdom.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bonarja/react-sdom.git"
+    },
+    "keywords": [
+        "dom",
+        "react",
+        "frontend",
+        "ui",
+        "animatecss",
+        "animate",
+        "handling"
+    ],
+    "author": "bonarja",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/bonarja/react-sdom/issues"
+    },
+    "homepage": "https://bonarja.github.io/sdom/#/React"
+}
