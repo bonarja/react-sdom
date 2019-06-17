@@ -1,6 +1,6 @@
 {
     "name": "react-sdom",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "description": "Simplify the task of manipulating the DOM of the react components and use animations (like jQuery)",
     "main": "sdom.js",
     "scripts": {

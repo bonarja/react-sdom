@@ -114,8 +114,9 @@ const SDOM = new (function() {
                 x.style[a] = b;
             });
         } else if (typeof a === "object" && !b) {
+            var self = this;
             var action = function(key, a) {
-                this.forEach(function(x) {
+                self.forEach(function(x) {
                     if (
                         typeof a[key] === "number" &&
                         a[key] !== 0 &&

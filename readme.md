@@ -17,7 +17,7 @@ import { Sdom } from "react-sdom";
 class Home extends React.Component {
     title = Sdom(); // get Sdom ref h1
 
-    componentDidUpdate() {
+    componentDidMount() {
         // use Sdom ref
         this.title
             .css({
