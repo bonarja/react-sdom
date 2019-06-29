@@ -566,6 +566,23 @@ const Request = function(url, data, header, type) {
                 }
             }
 
+            // set data in get
+            if(type.toUpperCase() === "GET" && typeof data === "object") {
+                if( url.indexOf("?")<0 ) {
+                    url+="?";
+                } else {
+                    url+="&"
+                }
+                var count = 0;
+                for (var key in data) {
+                    if (count > 0) {
+                        url+="&";
+                    }
+                    url+= key + "=" + data[key];
+                    count++;
+                }
+            }
+
             xhttp.open(type.toUpperCase(), url, true);
             xhttp.setRequestHeader("Content-type", header);
 
@@ -573,7 +590,9 @@ const Request = function(url, data, header, type) {
                 if (this.readyState == 4) {
                     if (this.status == 200) {
                         var res = this.responseText;
-                        if (header === "application/x-www-form-urlencoded") {
+                        if (
+                            header === "application/x-www-form-urlencoded"
+                        ) {
                             try {
                                 res = JSON.parse(res);
                             } catch (error) {}
