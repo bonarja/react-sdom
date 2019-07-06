@@ -311,7 +311,7 @@ const SDOM = new (function() {
             });
             setTimeout(function() {
                 self.forEach(function(x) {
-                    x.removeClass(_class);
+                    x.classList.remove(_class);
                 })
                 done(self);
             }, time);
@@ -343,8 +343,8 @@ const SDOM = new (function() {
             });
             setTimeout(function() {
                 self.forEach(function(x) {
-                    x.css("display", "none");
-                    x.removeClass(_class);
+                    x.style.display = "none";
+                    x.classList.remove(_class);
                 })
                 done(self);
             }, time);
@@ -369,7 +369,7 @@ const SDOM = new (function() {
             });
             setTimeout(function() {
                 self.forEach(function(x) {
-                    x.removeClass(_class);
+                    x.classList.remove(_class);
                 })
                 done(self);
             }, time);
