@@ -310,7 +310,9 @@ const SDOM = new (function() {
                 x.style.animationDuration = time + "ms";
             });
             setTimeout(function() {
-                self.removeClass(_class);
+                self.forEach(function(x) {
+                    x.removeClass(_class);
+                })
                 done(self);
             }, time);
         });
@@ -340,8 +342,10 @@ const SDOM = new (function() {
                 });
             });
             setTimeout(function() {
-                self.css("display", "none");
-                self.removeClass(_class);
+                self.forEach(function(x) {
+                    x.css("display", "none");
+                    x.removeClass(_class);
+                })
                 done(self);
             }, time);
         });
@@ -364,7 +368,9 @@ const SDOM = new (function() {
                 });
             });
             setTimeout(function() {
-                self.removeClass(_class);
+                self.forEach(function(x) {
+                    x.removeClass(_class);
+                })
                 done(self);
             }, time);
         });
